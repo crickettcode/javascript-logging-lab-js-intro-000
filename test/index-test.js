@@ -10,6 +10,7 @@ describe('index', () => {
 
   it('calls console.error('help')', done => {
     const spy = expect.spyOn(console, 'error').andCallThrough()
+    console.error("HALP!")
 
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
@@ -44,4 +45,4 @@ describe('index', () => {
     })
   })
 })
-console.error("HALP!")
+
